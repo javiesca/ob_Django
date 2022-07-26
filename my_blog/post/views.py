@@ -4,6 +4,15 @@ from django.http import HttpResponse
 from .models import Author, Entry
 
 # Create your views here.
+def update(request):
+    author = Author.objects.get(id=1)
+    author.name = "Javier"
+    author.email = "javierin@hotmail.com"
+    author.save()
+    return HttpResponse("Update correctly")
+
+
+
 def queries(request):
 
     #Obtener todos los elementos
@@ -32,3 +41,4 @@ def queries(request):
 
                                                 #CONTEXTO
     return render(request, 'post/queries.html', {'authors':authors, 'filtered':filtered, 'author':author, 'limits':limits, 'offsets':offsets, 'orders':orders, 'filtered2':filtered2, 'filtered3':filtered3})
+
