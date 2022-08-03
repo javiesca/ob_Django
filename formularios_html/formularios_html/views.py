@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# GET
 def getform(request):
     return render(request, 'form.html', {})
 
@@ -11,7 +12,7 @@ def getgoal(request):
     name = request.GET['name']
     return render(request, 'success.html', {'name': name})
 
-
+# POST
 def postform(request):
     return render(request, 'postform.html', {})
 
