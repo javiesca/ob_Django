@@ -12,3 +12,7 @@ def goal(request):
         return HttpResponse("El metodo GET no está permitido en esta ruta", 404)
     
     return HttpResponse(request.POST['name'])
+
+def widget(request):
+
+    return HttpResponse("Éxito")

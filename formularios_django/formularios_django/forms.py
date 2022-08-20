@@ -7,3 +7,9 @@ class CommentForm(forms.Form):
     url = forms.URLField(label="Tu sitio web", required=False, initial='http://')
     content = forms.CharField(label="Escribe al comentario")
     date = forms.DateField(label = "Fecha")
+
+class ContactForm(forms.Form):
+    name = forms.CharField(label="Nombre:", max_length=50)
+    email = forms.EmailField(label="Email:", max_length=50)
+    message = forms.CharField(label="Mensaje:")
+
