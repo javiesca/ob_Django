@@ -10,7 +10,7 @@
     <h1>Formulario Django</h1>
     <hr>
     <table>
-        <form action="{% url 'goal' %}" method="POST">
+        <form action="{% url 'widget' %}" method="POST">
             {% csrf_token %}
             {{ comment_form.as_table }}
             <input type="submit" value="Enviar">
